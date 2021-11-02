@@ -1,0 +1,203 @@
+:root{
+    --col0: #8BC6EC;
+    --col1: #9599E2;
+    --col2: #ecf0f1;
+}
+
+body {
+    font-family: "Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #2e4053;
+    background-color: var(--col2);
+    overflow-x: hidden;
+}
+.main{
+    background-color:  #fdfefe ;
+
+}
+p {
+    margin: 0;
+}
+h3{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.colored{
+    background-color: var(--col0);
+    background-image: linear-gradient(62deg, var(--col0) 0%, var(--col1) 100%);
+    color: var(--col2)
+}
+
+.bg-col0{
+    background-color: var(--col0);
+}
+
+.bg-col1{
+    background-color: var(--col1);
+}
+
+.bg-col2{
+    background-color: var(--col2);
+}
+
+.text-col0{
+    color: var(--col0);
+}
+
+.text-col1{
+    color: var(--col1);
+}
+.avatar{
+    border: var(--col2) 0.5rem solid;
+}
+.title {
+    text-align: center;
+}
+
+.avatar_frame{
+    display: flex;
+    justify-content: center;
+}
+
+.name{
+    font-size: 2.5rem;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.desc{
+    font-size: 1rem;
+}
+.bar > span {
+    width: 20%;
+    min-width: 90px;
+}
+.bar > div{
+    width: 80%;
+}
+.info > li > i{
+    width: 30px;
+}
+
+.contact, .framework, .ecole, .projet, .link{
+    margin-top: 2rem;
+}
+.buttons{
+    justify-content: center;
+    animation: from_right 1s ease 0s;
+}
+@media (min-width: 48em) {
+    .avatar{
+        margin-bottom: -60px;
+    }
+    .avatar_frame{
+        justify-content: start;
+    }
+    .title{
+        text-align: start;
+    }
+    .contact, .framework, .ecole, .projet, .link{
+        margin-top: 0;
+    }
+    .buttons{
+        justify-content: start;
+    }
+}
+
+@keyframes from_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes from_right{
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+ }
+@keyframes card_flip_1 {
+    0%{
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes card_flip_2 {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes grey_to_color {
+    0%{
+        opacity: 0;
+        filter: grayscale(100%) blur(5px);
+    }
+    100%{
+        opacity: 1;
+        filter: grayscale(0%) blur(0px);
+    }
+}
+.progress-bar{
+    opacity: 0;
+    transform: translateX(-300px);
+}
+.progress-bar{
+    animation: from_left 1.5s ease 0.5s forwards
+}
+
+.avatar {
+    animation: grey_to_color 0.8s ease 0s;
+}
+
+.card:hover{
+    transition: transform 120ms;
+    transform: scale(1.05);
+}
+
+.prog0:hover{
+    transition: transform 120ms;
+    box-shadow: 0 0rem 1rem var(--col0) !important;
+}
+
+.prog1:hover{
+    transition: transform 120ms;
+    box-shadow: 0 0rem 1rem var(--col1) !important;
+}
+.bar:hover{
+    font-weight: bold;
+}
+
+.avatar:hover{
+    transition: transform 120ms;
+    transform: scale(1.05);
+}
+
+.btn:hover{
+    transition: transform 120ms;
+    transform: scale(1.05);
+}
+
+.certif:hover img{
+    transition: transform 120ms;
+    transform: scale(1.05);
+}
